@@ -28,7 +28,7 @@ What you need?
   * [OPTIONAL] A C/C++ compiler (depending on the project you want to
     contribute to), or a Fortran compiler.
   * [OPTIONAL] Several Virtual Machines running different Operating Systems to
-     test you changes on multiple platforms.
+    test you changes on multiple platforms.
 
 
 What you need to get comfortable with?
@@ -59,7 +59,7 @@ question:
   * Other PR review
   * Triage of issues
 
-Two advice:
+Three pieces of advice:
 
   * Your own needs are the best driver for open source contributions
   * If you don't know where to start, look for issues tagged `easy`
@@ -74,7 +74,7 @@ Two most reliable (free) tools to provision development environments I know:
   * Enthought's ``EDM``
   * Continuum Analytics' ``miniconda``
 
-+========================+================================================+=====================================================+
++------------------------+------------------------------------------------+-----------------------------------------------------+
 |                        |                     EDM                        |         Miniconda                                   |
 +========================+================================================+=====================================================+
 | 1. Download            | enthought.com/products/edm                     | conda.io/miniconda                                  |
@@ -86,7 +86,7 @@ Two most reliable (free) tools to provision development environments I know:
 | 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy            | conda install numpy=1.11 scipy                      |
 +------------------------+------------------------------------------------+-----------------------------------------------------+
 | 5. Install package     | ~/.edm/envs/devenv/bin/python setup.py develop | ~/miniconda/envs/devenv/bin/python setup.py develop |
-+========================+================================================+=====================================================+
++------------------------+------------------------------------------------+-----------------------------------------------------+
 
 More help? ``edm -h`` or ``conda -h`` commands.
 
