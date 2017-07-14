@@ -90,18 +90,174 @@ Two most reliable (free) tools to provision development environments I know:
 
 More help? ``edm -h`` or ``conda -h`` commands.
 
+The project contains C extensions?
+----------------------------------
+Some projects require a C/C++ compiler because contain C/C++ code or Cython
+code which needs to get compiled.
+
+  * On OSX and linux, you can typically use the native compiled (gcc). Use
+    ``yum``/``apt-get`` or OSX command line tools to install it if needed.
+  * On Windows, ... it is a mess. For Python2.7, you need to use VS2008. For
+    Python 3.4, you need to use VS 2010. For Python 3.5 and 3.6, you need to
+    use VS 2015. See https://pandas.pydata.org/pandas-docs/stable/contributing.html
+    for links to free installers.
+
 
 How to contribute code?
 =======================
 
+The simplest workflow
+---------------------
 
-How to find my sprint and get setup?
-====================================
+  #. Identify a work item you want to contribute. **Think small**.
 
-Look for your sprint in http://bit.ly/sprints2017 .
+  #. Create a ticket for your work item **if it doesn't already exist**.
+
+  #. Go to the package's github repository. Fork it into your account where you
+     have push rights.
+
+  #. Clone your fork locally::
+
+        git clone https://github.com/<USER NAME>/sprint_tutorial
+
+  #. Build the project into your dev environment. Run the test suite.
+
+  #. Branch off to a new branch for your work item::
+
+        git branch fix/bug_name
+        git checkout fix/bug_name
+
+  #. Make sure you are in the expected branch::
+
+        git branch
+
+  #. Do work. **STAY FOCUSED** and only address the work item you selected.
+
+  #. Review what has been done with::
+
+        git status
+        git diff file1.py
+
+  #. When a set of changes represent a step toward your goal, commit::
+
+        git commit -m "TEST: add unit test to show the bug" file1.py file2.py ...
+
+     Or make a more complete commit message using an editor::
+
+        git commit file1.py file2.py ...
+
+     and write the commit message in the editor git uses.
+
+  #. Once you have done everything you want, push your branch to github::
+
+        git push --set-upstream origin fix/bug_name
+
+     or simply::
+
+        git push
+
+  #. Go to Github to make a `Pull Request` (PR) with your work. You should see
+     your branch available for a PR in both your repo and in the upstream
+     repository that you forked. Select the branch you would like to pull your
+     branch into itself, and add a complete description.
+
+  #. Check for the result of Continuous Integration (CI).
+
+  #. Discuss your work with your reviewer. Implement fixes and improvements,
+     and push again to your branch. Your PR will update automatically.
+
+  #. If upstream master gets updated between your branch and the time your PR
+     is merged, you will need to merge changes into your branch or rebase your
+     branch onto the new one, and resolve any conflict::
+
+        git remote add upstream git@github.com:jonathanrocher/sprint_tutorial
+
+     if your project is ok with merge, it is easier::
+
+        git checkout master
+        git pull upstream master
+        git checkout fix/bug_name
+        git merge master
+        git push
+
+     If you project requires to rebase::
+
+        git fetch upstream
+        git rebase upstream/master
+
+     But the hash of your current state will be changed, so if you have pushed
+     before the rebase, your state will need to be forced pushed::
+
+        git push --force
+
+     Kids, don't do this alone!
+
+
+Check-list before making a PR and requesting review.
+----------------------------------------------------
+
+That check-list depends on each project, but typically, you should think of the
+following:
+
+  * Tests pass locally
+  * code conforms to pylint/flake8/pep8/styling
+  * All new functions and classes have docstrings
+  * Your branch is (re)based on the current master
+  * CI tests are all green
+  * Documentation is updated (if needed)
+  * Changelog is updated (if needed)
+  * Contributor document is updated (if needed)
+
+
+When things go wrong with git
+-----------------------------
+
+  * You have made a mess and want to erase all un-committed code (ALL FILES)::
+
+        git reset --hard HEAD
+
+  * You have made a mess in only 1 file::
+
+        git checkout HEAD -- filename
+
+  * You have committed too quickly, and want to include more files, or redo your
+    commit message::
+
+        git reset --soft HEAD^
+
+  * You have pulled master or a collaborator's work and now have a conflict?
+    Open the conflicted file in an editor, and merge lines manually. Then::
+
+        git add filename
+
+    to mark it as resolved. Your branch is back to being ready to be committed.
+
+  * You would like to pause your work in progress without committing to do
+    something else or switch to another branch that has conflicts::
+
+        git stash
+
+    When you are done, and want your changes back::
+
+        git stash pop
+
+
+
+What's next?
+============
+
+Look for your sprint in http://bit.ly/sprints2017 . Get yourself setup as much
+as possible using information there.
 
 
 Where to get more help?
 =======================
 
+  * Your sprint leader
+  * The project's contributing guidelines (see column H of http://bit.ly/sprints2017 )
+  * The project's `travis.yml` file.
   * Sprint help on slack: `sprints` channel at http://scipy2017.slack.com
+  * Contribution workflow: https://pandas.pydata.org/pandas-docs/stable/contributing.html
+  * Numpy testing guidelines: https://github.com/numpy/numpy/blob/master/doc/TESTS.rst.txt
+  * Numpy docstring guidelines: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
+  * Restructured text primer: http://docutils.sourceforge.net/docs/user/rst/quickref.html
