@@ -225,6 +225,20 @@ When things go wrong with git
 
         git reset --soft HEAD^
 
+  * You don't like where you are going and decide you want to go back in time,
+    to a precise commit, look for the commit hash with::
+
+        git log
+
+    and then reset to that point::
+
+        git reset --hard <HASH>
+
+    You can also go back in time without loosing your work since then, just to
+    check things out::
+
+        git checkout <HASH>
+
   * You have pulled master or a collaborator's work and now have a conflict?
     Open the conflicted file in an editor, and merge lines manually. Then::
 
