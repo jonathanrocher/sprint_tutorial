@@ -98,7 +98,7 @@ How to contribute code?
 How to find my sprint and get setup?
 ====================================
 
-
+Look for your sprint in http://bit.ly/sprints2017 .
 
 
 Where to get more help?
