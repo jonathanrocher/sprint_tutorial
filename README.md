@@ -2,11 +2,13 @@
 # Sample repository for the SciPy tutorial to learn how to sprint
 
 This repository was created to allow new sprinters to learn to
-contribute to a project.
+contribute to a project. It also contains a document summarizing the
+most important steps to learn to contribute to open source Python
+projects.
 
 ## Learn to sprint
 See the ``doc/how_to_sprint.rst`` document to get started on learning how to
-contribute to projects.
+contribute to projects during and after sprints.
 
 ## Contributing
 For guidelines to contribute to this project, please see the
