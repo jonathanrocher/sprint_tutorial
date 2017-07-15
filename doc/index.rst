@@ -10,6 +10,8 @@ Welcome to sprint_tutorial's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   how_to_sprint.rst
+
 
 
 Indices and tables

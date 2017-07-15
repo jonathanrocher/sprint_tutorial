@@ -7,6 +7,11 @@ To contribute to this project, you need to make sure that:
     * the documentation builds.
 
 
+Guidelines for contributors
+===========================
+To learn to contribute to projects, please refer to the
+``doc/how_to_sprint.rst`` documentation file.
+
 
 Test suite
 ==========
