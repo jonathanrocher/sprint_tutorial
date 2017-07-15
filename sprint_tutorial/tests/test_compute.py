@@ -11,3 +11,7 @@ def test_my_sum1():
 
 def test_my_sum2():
     assert_equal(my_sum(1, -1), 0)
+
+
+def test_my_sum3():
+    assert_equal(my_sum(1, 1), 2)
