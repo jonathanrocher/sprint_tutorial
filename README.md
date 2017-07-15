@@ -20,3 +20,4 @@ This project depends on the following packages:
     * numpy
     * nose (for the test suite)
     * sphinx (for the documentation)
+    * flake8 (for contributors)
