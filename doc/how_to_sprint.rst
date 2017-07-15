@@ -271,6 +271,8 @@ Here are a few tricks to get out of common situations:
 
         git stash pop
 
+    Note that you can stash multiple times. States are stored on a stack
+    (FILO).
 
 
 What's next?
