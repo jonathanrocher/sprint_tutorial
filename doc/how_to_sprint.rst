@@ -106,8 +106,8 @@ code which needs to get compiled.
 How to contribute code?
 =======================
 
-The simplest workflow
----------------------
+The typical workflow
+--------------------
 
   #. Identify a work item you want to contribute. **Think small**.
 
