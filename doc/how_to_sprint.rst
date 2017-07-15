@@ -195,7 +195,10 @@ The typical workflow
 
   #. After merge, there are 3 typical cleaning steps: delete the branch on the
      remote repositories (in github), update master locally, delete the branch
-     locally.
+     locally::
+
+        git checkout master
+        git branch -d fix/bug_name
 
   #. GOTO 1.
 
@@ -218,6 +221,12 @@ following:
 
 When things go wrong with git
 -----------------------------
+Git is an incredibly powerful tool to manage code, but it is pretty easy to
+mess up. It is ok, everyone messes up with ``git``. The good news is, you can
+(almost) always recover from a mess up. If you have an issue, pause, think,
+google, find a git guru!
+
+Here are a few tricks to get out of common situations:
 
   * You have made a mess and want to erase all un-committed code (ALL FILES)::
 
@@ -262,6 +271,8 @@ When things go wrong with git
 
         git stash pop
 
+    Note that you can stash multiple times. States are stored on a stack
+    (FILO).
 
 
 What's next?
