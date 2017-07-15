@@ -1,9 +1,9 @@
-import os
+from os.path import dirname, join
 from setuptools import setup
 
 
 def read(fname):
-    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+    return open(join(dirname(__file__), fname)).read()
 
 
 setup(
