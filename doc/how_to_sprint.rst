@@ -106,8 +106,8 @@ code which needs to get compiled.
 How to contribute code?
 =======================
 
-The simplest workflow
----------------------
+The typical workflow
+--------------------
 
   #. Identify a work item you want to contribute. **Think small**.
 
@@ -190,7 +190,14 @@ The simplest workflow
 
         git push --force
 
-     Kids, don't do this alone!
+  #. Once the PR has been approved, it will be merged in the upstream project
+     by someone who has push rights.
+
+  #. After merge, there are 3 typical cleaning steps: delete the branch on the
+     remote repositories (in github), update master locally, delete the branch
+     locally.
+
+  #. GOTO 1.
 
 
 Check-list before making a PR and requesting review.
