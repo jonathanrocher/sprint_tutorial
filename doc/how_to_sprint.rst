@@ -278,7 +278,7 @@ Here are a few tricks to get out of common situations:
 What's next?
 ============
 
-Look for your sprint in http://bit.ly/sprints2017 . Get yourself setup as much
+Look for your sprint in http://bit.ly/sprints2018 . Get yourself setup as much
 as possible using information there.
 
 
@@ -286,9 +286,9 @@ Where to get more help?
 =======================
 
   * Your sprint leader
-  * The project's contributing guidelines (see column H of http://bit.ly/sprints2017 )
+  * The project's contributing guidelines (see column H of http://bit.ly/sprints2018 )
   * The project's `travis.yml` file.
-  * Sprint help on slack: `sprints` channel at http://scipy2017.slack.com
+  * Sprint help on slack: `sprints` channel at http://scipy2018.slack.com
   * Contribution workflow: https://pandas.pydata.org/pandas-docs/stable/contributing.html
   * Numpy testing guidelines: https://github.com/numpy/numpy/blob/master/doc/TESTS.rst.txt
   * Numpy docstring guidelines: https://github.com/numpy/numpy/blob/master/doc/HOWTO_DOCUMENT.rst.txt
