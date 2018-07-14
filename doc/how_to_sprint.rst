@@ -6,94 +6,99 @@ How to sprint on open source projects in Python
 Outline
 =======
 
-  #. What you need?
-  #. What you need to get comfortable with?
-  #. What you can contribute?
-  #. How to create development environments?
-  #. How to contribute code?
-  #. How to find my sprint and get setup?
-  #. Where to get more help?
+  #. What you need to get comfortable with
+  #. What you need
+  #. What you can contribute
+  #. How to create development environments
+  #. How to contribute code
+  #. How to find my sprint and get setup
+  #. What if I need more help?
 
 
-What you need?
-==============
+Contributing: what you need to get comfortable with
+====================================================
 
-  * A python aware code editor. There are many free options: Pycharm, Canopy,
-    Spyder, emacs, vi(m), ...
-  * An account on `github.com`
-  * The `git` tool. OSX: Install Xcode command line tools.
-    Windows: https://git-scm.com/download/. Linux: use your package manager
-    (`yum`, `apt-get`).
-  * A tool to quickly create and manager light development environments
-  * [OPTIONAL] A C/C++ compiler (depending on the project you want to
-    contribute to), or a Fortran compiler.
-  * [OPTIONAL] Several Virtual Machines running different Operating Systems to
-    test you changes on multiple platforms.
+  * Working at the command line.
+  * Issue workflow on Github.
+  * Making changes and recording them using `git`.
+  * *Good coding practices (testing frameworks, styling tools, restructured
+    text and documentation generators).
+  * *Debuggers and grep-type tools to find your way through new source code.
+
+Do you need to be here? No if you are already comfortable with the first 3
+items!
 
 
-What you need to get comfortable with?
-======================================
-
-  * Working at the command line
-  * `git`
-  * Good coding practices (testing frameworks, styling tools, restructured text
-    and documentation generators).
-  * Debuggers and grep-type tools to find your way through new source code.
-
-
-What you can contribute?
-========================
+What you can contribute
+=======================
 
 List of ideas, requiring more and more technical knowledge of the package in
 question:
 
   * Documentation improvements
-  * Tutorial review
+  * Tutorial review/improvements
   * Example review
   * Example creation
-  * Existing ticket review
-  * Add unit tests
-  * Bug fix tickets
+  * Add unit tests (driven by test coverage analysis)
+  * Fix a bug
   * Tutorial creation
-  * New features tickets
-  * Other PR review
-  * Triage of issues
+  * Implement new features
+  * Review other people's PR
+  * Close old issues not relevant anymore
+  * Triage issues
 
 Three pieces of advice:
 
-  * Your own needs are the best driver for open source contributions
-  * If you don't know where to start, look for issues tagged `easy`
+  * Your own needs are the best driver for open source contributions.
+  * If you don't know where to start, look for issues tagged `easy`.
   * Ask current maintainers what would be the most helpful.
 
+Next, see your sprint lead for suggestions.
+
+Contributing: what tools you need
+=================================
+
+  * A python aware code editor. There are many free options: Pycharm,
+    Spyder, Canopy, emacs, vi(m), ....
+  * An account on `github.com`.
+  * The `git` tool. OSX: Install Xcode command line tools.
+    Windows: https://git-scm.com/download/. Linux: use your package manager
+    (`yum`, `apt-get`, ...).
+  * A tool to quickly create and manage light development environments.
+  * [OPTIONAL] A C/C++ compiler (depending on the project you want to
+    contribute to), or a Fortran compiler.
+  * [OPTIONAL] Several Virtual Machines running different Operating Systems to
+    test your changes on multiple platforms.
 
 How to create development environments?
 =======================================
 
 Two most reliable (free) tools to provision development environments I know:
 
+  * Anaconda's ``miniconda``
   * Enthought's ``EDM``
-  * Continuum Analytics' ``miniconda``
 
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-|                        |                     EDM                        |         Miniconda                                   |
-+========================+================================================+=====================================================+
-| 1. Download            | enthought.com/products/edm                     | conda.io/miniconda                                  |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 2. Create a new env    | edm environments create --version 3.6 devenv   | conda create -n devenv python=3.6                   |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 3. Activate new envir. | edm shell -e devenv                            | source activate devenv                              |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy            | conda install numpy=1.11 scipy                      |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 5. Install package     | ~/.edm/envs/devenv/bin/python setup.py develop | ~/miniconda/envs/devenv/bin/python setup.py develop |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+|                        |                                      EDM                               |                   Miniconda                            |
++========================+========================================================================+========================================================+
+| 1. Download            | `enthought.com/products/edm <http://www.enthought.com/products/edm/>`_ | `conda.io/miniconda <http://www.conda.io/miniconda>`_  |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 2. Create a new env    | edm environments create --version 3.6 devenv                           | conda create -n devenv python=3.6                      |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 3. Activate new envir. | edm shell -e devenv                                                    | source activate devenv                                 |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy                                    | conda install numpy=1.11 scipy                         |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 5. Install package     | ~/.edm/envs/devenv/bin/python setup.py develop                         | ~/miniconda/envs/devenv/bin/python setup.py develop    |
+|                        | ~/.edm/envs/devenv/bin/pip install -e .                                | ~/miniconda/envs/devenv/bin/pip install -e .           |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 
 More help? ``edm -h`` or ``conda -h`` commands.
 
 The project contains C extensions?
 ----------------------------------
 Some projects require a C/C++ compiler because contain C/C++ code or Cython
-code which needs to get compiled.
+code which needs to get compiled to be tested/distributed.
 
   * On OSX and linux, you can typically use the native compiled (gcc). Use
     ``yum``/``apt-get`` or OSX command line tools to install it if needed.
@@ -139,6 +144,8 @@ The typical workflow
         git branch
 
   #. Do work. **STAY FOCUSED** and only address the work item you selected.
+     Otherwise review will be hard(er), therefore delayed, and your PR is
+     likely to be rejected.
 
   #. Review what has been done with::
 
@@ -216,14 +223,13 @@ Check-list before making a PR and requesting review.
 That check-list depends on each project, but typically, you should think of the
 following:
 
-  * Tests pass locally
-  * code conforms to pylint/flake8/pep8/styling
-  * All new functions and classes have docstrings
-  * Your branch is (re)based on the current master
-  * CI tests are all green
-  * Documentation is updated (if needed)
-  * Changelog is updated (if needed)
-  * Contributor document is updated (if needed)
+  * Tests pass on your machine (try as many OSs as possible).
+  * Code conforms to pylint/flake8/pep8/styling.
+  * All new functions and classes have docstrings.
+  * Your branch is sync-ed with current master.
+  * CI tests are all green.
+  * Documentation is updated (if needed).
+  * Changelog is updated (if needed).
 
 
 When things go wrong with git
@@ -286,7 +292,8 @@ What's next?
 ============
 
 Look for your sprint in http://bit.ly/sprints2018 . Get yourself setup as much
-as possible using information there.
+as possible using information there. Then, head down and connect with your
+sprint lead.
 
 
 Where to get more help?
