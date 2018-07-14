@@ -89,8 +89,9 @@ Two most reliable (free) tools to provision development environments I know:
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 | 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy                                    | conda install numpy=1.11 scipy                         |
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
-| 5. Install package     | ~/.edm/envs/devenv/bin/python setup.py develop                         | ~/miniconda/envs/devenv/bin/python setup.py develop    |
-|                        | ~/.edm/envs/devenv/bin/pip install -e .                                | ~/miniconda/envs/devenv/bin/pip install -e .           |
+|                        |                                                                        | conda install --file requirements.txt                  |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 5. Install package     | pip install -e .                                                       | pip install -e .                                       |
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 
 More help? ``edm -h`` or ``conda -h`` commands.
