@@ -6,39 +6,43 @@ How to sprint on open source projects in Python
 Outline
 =======
 
-  #. What you need?
-  #. What you need to get comfortable with?
-  #. What you can contribute?
-  #. How to create development environments?
-  #. How to contribute code?
-  #. How to find my sprint and get setup?
-  #. Where to get more help?
+  #. What you need to get comfortable with
+  #. What you need
+  #. What you can contribute
+  #. How to create development environments
+  #. How to contribute code
+  #. How to find my sprint and get setup
+  #. What if I need more help?
 
 
-What you need?
-==============
+Contributing: what you need to get comfortable with
+====================================================
 
-  * A python aware code editor. There are many free options: Pycharm, Canopy,
-    Spyder, emacs, vi(m), ...
-  * An account on `github.com`
+  * Working at the command line.
+  * Issue workflow on Github.
+  * Making changes and recording them using `git`.
+  * *Good coding practices (testing frameworks, styling tools, restructured
+    text and documentation generators).
+  * *Debuggers and grep-type tools to find your way through new source code.
+
+Do you need to be here? No if you are already comfortable with the first 3
+items!
+
+
+Contributing: what tools you need
+=================================
+
+  * A python aware code editor. There are many free options: Pycharm,
+    Spyder, Canopy, emacs, vi(m), ....
+  * An account on `github.com`.
   * The `git` tool. OSX: Install Xcode command line tools.
     Windows: https://git-scm.com/download/. Linux: use your package manager
-    (`yum`, `apt-get`).
-  * A tool to quickly create and manager light development environments
+    (`yum`, `apt-get`, ...).
+  * A tool to quickly create and manage light development environments.
   * [OPTIONAL] A C/C++ compiler (depending on the project you want to
     contribute to), or a Fortran compiler.
   * [OPTIONAL] Several Virtual Machines running different Operating Systems to
-    test you changes on multiple platforms.
-
-
-What you need to get comfortable with?
-======================================
-
-  * Working at the command line
-  * `git`
-  * Good coding practices (testing frameworks, styling tools, restructured text
-    and documentation generators).
-  * Debuggers and grep-type tools to find your way through new source code.
+    test your changes on multiple platforms.
 
 
 What you can contribute?
@@ -72,7 +76,7 @@ How to create development environments?
 Two most reliable (free) tools to provision development environments I know:
 
   * Enthought's ``EDM``
-  * Continuum Analytics' ``miniconda``
+  * Anaconda's ``miniconda``
 
 +------------------------+------------------------------------------------+-----------------------------------------------------+
 |                        |                     EDM                        |         Miniconda                                   |
@@ -287,7 +291,8 @@ What's next?
 ============
 
 Look for your sprint in http://bit.ly/sprints2018 . Get yourself setup as much
-as possible using information there.
+as possible using information there. Then, head down and connect with your
+sprint lead.
 
 
 Where to get more help?
