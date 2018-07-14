@@ -113,6 +113,9 @@ The typical workflow
 
   #. Create a ticket for your work item **if it doesn't already exist**.
 
+  #. Assign the ticket you are working on to yourself so others know it is
+     work in progress.
+
   #. Go to the package's github repository. Fork it into your account where you
      have push rights.
 
@@ -126,6 +129,10 @@ The typical workflow
 
         git branch fix/bug_name
         git checkout fix/bug_name
+
+     or in a single step::
+
+        git checkout -b fix/bug_name
 
   #. Make sure you are in the expected branch::
 
