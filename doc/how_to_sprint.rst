@@ -139,6 +139,8 @@ The typical workflow
         git branch
 
   #. Do work. **STAY FOCUSED** and only address the work item you selected.
+     Otherwise review will be hard(er), therefore delayed, and your PR is
+     likely to be rejected.
 
   #. Review what has been done with::
 
@@ -216,14 +218,13 @@ Check-list before making a PR and requesting review.
 That check-list depends on each project, but typically, you should think of the
 following:
 
-  * Tests pass locally
-  * code conforms to pylint/flake8/pep8/styling
-  * All new functions and classes have docstrings
-  * Your branch is (re)based on the current master
-  * CI tests are all green
-  * Documentation is updated (if needed)
-  * Changelog is updated (if needed)
-  * Contributor document is updated (if needed)
+  * Tests pass on your machine (try as many OSs as possible).
+  * Code conforms to pylint/flake8/pep8/styling.
+  * All new functions and classes have docstrings.
+  * Your branch is sync-ed with current master.
+  * CI tests are all green.
+  * Documentation is updated (if needed).
+  * Changelog is updated (if needed).
 
 
 When things go wrong with git
