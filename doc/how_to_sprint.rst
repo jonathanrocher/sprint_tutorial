@@ -29,6 +29,32 @@ Do you need to be here? No if you are already comfortable with the first 3
 items!
 
 
+What you can contribute
+=======================
+
+List of ideas, requiring more and more technical knowledge of the package in
+question:
+
+  * Documentation improvements
+  * Tutorial review/improvements
+  * Example review
+  * Example creation
+  * Add unit tests (driven by test coverage analysis)
+  * Fix a bug
+  * Tutorial creation
+  * Implement new features
+  * Review other people's PR
+  * Close old issues not relevant anymore
+  * Triage issues
+
+Three pieces of advice:
+
+  * Your own needs are the best driver for open source contributions.
+  * If you don't know where to start, look for issues tagged `easy`.
+  * Ask current maintainers what would be the most helpful.
+
+Next, see your sprint lead for suggestions.
+
 Contributing: what tools you need
 =================================
 
@@ -44,39 +70,13 @@ Contributing: what tools you need
   * [OPTIONAL] Several Virtual Machines running different Operating Systems to
     test your changes on multiple platforms.
 
-
-What you can contribute?
-========================
-
-List of ideas, requiring more and more technical knowledge of the package in
-question:
-
-  * Documentation improvements
-  * Tutorial review
-  * Example review
-  * Example creation
-  * Existing ticket review
-  * Add unit tests
-  * Bug fix tickets
-  * Tutorial creation
-  * New features tickets
-  * Other PR review
-  * Triage of issues
-
-Three pieces of advice:
-
-  * Your own needs are the best driver for open source contributions
-  * If you don't know where to start, look for issues tagged `easy`
-  * Ask current maintainers what would be the most helpful.
-
-
 How to create development environments?
 =======================================
 
 Two most reliable (free) tools to provision development environments I know:
 
-  * Enthought's ``EDM``
   * Anaconda's ``miniconda``
+  * Enthought's ``EDM``
 
 +------------------------+------------------------------------------------+-----------------------------------------------------+
 |                        |                     EDM                        |         Miniconda                                   |
@@ -90,6 +90,7 @@ Two most reliable (free) tools to provision development environments I know:
 | 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy            | conda install numpy=1.11 scipy                      |
 +------------------------+------------------------------------------------+-----------------------------------------------------+
 | 5. Install package     | ~/.edm/envs/devenv/bin/python setup.py develop | ~/miniconda/envs/devenv/bin/python setup.py develop |
+|                        | ~/.edm/envs/devenv/bin/pip install -e .        | ~/miniconda/envs/devenv/bin/pip install -e .        |
 +------------------------+------------------------------------------------+-----------------------------------------------------+
 
 More help? ``edm -h`` or ``conda -h`` commands.
@@ -97,7 +98,7 @@ More help? ``edm -h`` or ``conda -h`` commands.
 The project contains C extensions?
 ----------------------------------
 Some projects require a C/C++ compiler because contain C/C++ code or Cython
-code which needs to get compiled.
+code which needs to get compiled to be tested/distributed.
 
   * On OSX and linux, you can typically use the native compiled (gcc). Use
     ``yum``/``apt-get`` or OSX command line tools to install it if needed.
