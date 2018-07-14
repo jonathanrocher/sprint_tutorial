@@ -113,7 +113,7 @@ The typical workflow
 
   #. Create a ticket for your work item **if it doesn't already exist**.
 
-  #. Assigned the ticket you are working on to yourself so others know it is
+  #. Assign the ticket you are working on to yourself so others know it is
      work in progress.
 
   #. Go to the package's github repository. Fork it into your account where you
