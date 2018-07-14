@@ -78,20 +78,20 @@ Two most reliable (free) tools to provision development environments I know:
   * Anaconda's ``miniconda``
   * Enthought's ``EDM``
 
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-|                        |                     EDM                        |         Miniconda                                   |
-+========================+================================================+=====================================================+
-| 1. Download            | `enthought.com/products/edm <http://www.enthought.com/products/edm/>`_ | `conda.io/miniconda <http://www.conda.io/miniconda>`_                                 |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 2. Create a new env    | edm environments create --version 3.6 devenv   | conda create -n devenv python=3.6                   |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 3. Activate new envir. | edm shell -e devenv                            | source activate devenv                              |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy            | conda install numpy=1.11 scipy                      |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
-| 5. Install package     | ~/.edm/envs/devenv/bin/python setup.py develop | ~/miniconda/envs/devenv/bin/python setup.py develop |
-|                        | ~/.edm/envs/devenv/bin/pip install -e .        | ~/miniconda/envs/devenv/bin/pip install -e .        |
-+------------------------+------------------------------------------------+-----------------------------------------------------+
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+|                        |                                      EDM                               |                   Miniconda                            |
++========================+========================================================================+========================================================+
+| 1. Download            | `enthought.com/products/edm <http://www.enthought.com/products/edm/>`_ | `conda.io/miniconda <http://www.conda.io/miniconda>`_  |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 2. Create a new env    | edm environments create --version 3.6 devenv                           | conda create -n devenv python=3.6                      |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 3. Activate new envir. | edm shell -e devenv                                                    | source activate devenv                                 |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy                                    | conda install numpy=1.11 scipy                         |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+| 5. Install package     | ~/.edm/envs/devenv/bin/python setup.py develop                         | ~/miniconda/envs/devenv/bin/python setup.py develop    |
+|                        | ~/.edm/envs/devenv/bin/pip install -e .                                | ~/miniconda/envs/devenv/bin/pip install -e .           |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 
 More help? ``edm -h`` or ``conda -h`` commands.
 
