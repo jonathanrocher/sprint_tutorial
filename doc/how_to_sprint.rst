@@ -50,8 +50,9 @@ question:
 Three pieces of advice:
 
   * Your own needs are the best driver for open source contributions.
-  * If you don't know where to start, look for issues tagged `easy`.
-  * Ask current maintainers what would be the most helpful.
+  * If you don't know what to do, look for issues tagged `easy`.
+  * If you don't know what to do, ask maintainers what would be the 
+    most helpful.
 
 Next, see your sprint lead for suggestions.
 
@@ -59,7 +60,7 @@ Contributing: what tools you need
 =================================
 
   * A python aware code editor. There are many free options: Pycharm,
-    Spyder, Canopy, emacs, vi(m), ....
+    Canopy, Spyder, emacs, vi(m), ....
   * An account on `github.com`.
   * The `git` tool. OSX: Install Xcode command line tools.
     Windows: https://git-scm.com/download/. Linux: use your package manager
