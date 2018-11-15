@@ -129,7 +129,8 @@ The typical workflow
 
         git clone https://github.com/<USER NAME>/sprint_tutorial
 
-  #. Build the project into your dev environment. Run the test suite.
+  #. Create a new development environment (if needed). Build the project into your 
+     dev environment. Run the test suite.
 
   #. Branch off to a new branch for your work item::
 
@@ -147,6 +148,9 @@ The typical workflow
   #. Do work. **STAY FOCUSED** and only address the work item you selected.
      Otherwise review will be hard(er), therefore delayed, and your PR is
      likely to be rejected.
+
+  # Remember, your most important contribution is tests! If some code isn't 
+    unit-tested, it is either broken, and it will be!
 
   #. Review what has been done with::
 
