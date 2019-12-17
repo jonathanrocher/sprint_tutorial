@@ -86,6 +86,8 @@ Two most reliable (free) tools to provision development environments I know:
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 | 2. Create a new env    | edm environments create --version 3.6 devenv                           | conda create -n devenv python=3.6                      |
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+|    Create env from file| edm env import NEW_ENV -f bundled_env.json (1)                         |                                                        |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 | 3. Activate new envir. | edm shell -e devenv                                                    | source activate devenv                                 |
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 | 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy                                    | conda install numpy=1.11 scipy                         |
@@ -94,6 +96,10 @@ Two most reliable (free) tools to provision development environments I know:
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
 | 5. Install package     | pip install -e .                                                       | pip install -e .                                       |
 +------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
+
+(1) This command creates a new environment ``NEW_ENV`` from a full environment
+description contained in the json file (bundle). The json file can be created
+from an existing environment replacing ``import`` by ``export``.
 
 More help? ``edm -h`` or ``conda -h`` commands.
 
@@ -113,7 +119,7 @@ code which needs to get compiled to be tested/distributed.
 How to contribute code?
 =======================
 
-The typical workflow
+The typical workflows
 --------------------
 
   #. Identify a work item you want to contribute. **Think small**.
