@@ -2,6 +2,9 @@
 How to sprint on open source projects in Python
 ===============================================
 
+This tutorial was given at the SciPy conference in 2016-2018 to teach people
+how to contribute to open source projects using the ``git`` command line tool
+and Github.
 
 Outline
 =======
@@ -129,15 +132,23 @@ The typical workflows
   #. Assign the ticket you are working on to yourself so others know it is
      work in progress.
 
-  #. Go to the package's github repository. Fork it into your account where you
-     have push rights.
+  #. Go to the package's Github repository. Fork it into your account where you
+     have push rights. If you are contributing to a package you have push
+     rights for, you might skip this step. Discuss with your project
+     lead/repository owner.
 
-  #. Clone your fork locally::
+  #. Clone your fork locally (or the package's repository directly if you have
+     push rights and are allowed to push branches to it directly)::
 
         git clone https://github.com/<USER NAME>/sprint_tutorial
 
-  #. Create a new development environment (if needed). Build the project into your 
-     dev environment. Run the test suite.
+     Whichever repository you clone will represent a "remote" and be called
+     "origin". A remote is a repository you can pull from. Git allows multiple
+     remotes to be defined on your local checked out code, in case you want to
+     pull and push to/from different locations.
+
+  #. Create a new development environment (if not already done). Build the
+     project into your dev environment. Run the test suite.
 
   #. Branch off to a new branch for your work item::
 
@@ -156,15 +167,13 @@ The typical workflows
      Otherwise review will be hard(er), therefore delayed, and your PR is
      likely to be rejected.
 
-    Note: Remember, your most important contribution is tests! If some code isn't
-    unit-tested, it is either already broken, and it will be (and no one will know)!
-
   #. Review what has been done with::
 
         git status
         git diff file1.py
 
-  #. When a set of changes represent a step toward your goal, commit::
+  #. When a set of changes represents a valuable step toward your goal,
+     commit::
 
         git commit -m "TEST: add unit test to show the bug" file1.py file2.py ...
 
@@ -172,9 +181,15 @@ The typical workflows
 
         git commit file1.py file2.py ...
 
-     and write the commit message in the editor git uses.
+     and write the commit message in the editor ``git`` uses.
 
-  #. Once you have done everything you want, push your branch to github::
+  #. Don't forget to include or update unit tests to make sure your work
+     doesn't break in the future. Remember, your most important contribution
+     might be your tests! If some code isn't unit-tested, it is either already
+     broken, and it will be (and no one will know about it)! And run the entire
+     test suite to make sure your contribution didn't break anything.
+
+  #. Once you have done everything you want, push your branch to Github::
 
         git push --set-upstream origin fix/bug_name
 
@@ -185,16 +200,20 @@ The typical workflows
   #. Go to Github to make a `Pull Request` (PR) with your work. You should see
      your branch available for a PR in both your repo and in the upstream
      repository that you forked. Select the branch you would like to pull your
-     branch into itself, and add a complete description.
+     branch into, and add a complete description.
 
   #. Check for the result of Continuous Integration (CI).
 
   #. Discuss your work with your reviewer. Implement fixes and improvements,
      and push again to your branch. Your PR will update automatically.
 
-  #. If upstream master gets updated between your branch and the time your PR
-     is merged, you will need to merge changes into your branch or rebase your
-     branch onto the new one, and resolve any conflict::
+  #. If the original package's master branch gets updated between your cloning
+     and the time your PR is merged, you may be asked to merge master changes
+     into your branch or rebase your branch onto the new one, and resolve any
+     conflict. To that effect, you need to define another remote you want to
+     pull changes from, assuming you have forked the repo. In that case, the
+     common approach is to define the official package repo as a new remote
+     called "upstream"::
 
         git remote add upstream git@github.com:jonathanrocher/sprint_tutorial
 
@@ -212,8 +231,8 @@ The typical workflows
         git fetch upstream
         git rebase upstream/master
 
-     But the hash of your current state will be changed, so if you have pushed
-     before the rebase, your state will need to be forced pushed::
+     Note that the commit hash of your current state will be changed, so if you
+     have pushed before the rebase, your state will need to be "force-pushed"::
 
         git push --force
 
@@ -221,7 +240,7 @@ The typical workflows
      by someone who has push rights.
 
   #. After merge, there are 3 typical cleaning steps: delete the branch on the
-     remote repositories (in github), update master locally from upstream,
+     remote repositories (in Github), update master locally from upstream,
      update master in your own fork and delete the work branch locally.::
 
         git checkout master
