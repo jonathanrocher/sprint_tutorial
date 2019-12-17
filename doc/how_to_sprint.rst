@@ -159,7 +159,13 @@ The typical workflows
 
         git checkout -b fix/bug_name
 
-  #. Make sure you are in the expected branch::
+     If a "commit" can be defined as a specific state of the source code you
+     are working with, a branch can be defined as a series of commit about your
+     targeted work. On your machine, git can track any number of branches,
+     allowing you to work, in parallel, on any number of distinct tasks.
+
+  #. Once you have switched to your new branch, you can make sure you are in
+     the expected branch with::
 
         git branch
 
