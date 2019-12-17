@@ -79,21 +79,27 @@ Two most reliable (free) tools to provision development environments I know:
   * Anaconda's ``miniconda``
   * Enthought's ``EDM``
 
-+------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
-|                        |                                      EDM                               |                   Miniconda                            |
-+========================+========================================================================+========================================================+
-| 1. Download            | `enthought.com/products/edm <http://www.enthought.com/products/edm/>`_ | `conda.io/miniconda <http://www.conda.io/miniconda>`_  |
-+------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
-| 2. Create a new env    | edm environments create --version 3.6 devenv                           | conda create -n devenv python=3.6                      |
-+------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
-| 3. Activate new envir. | edm shell -e devenv                                                    | source activate devenv                                 |
-+------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
-| 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy                                    | conda install numpy=1.11 scipy                         |
-+------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
-|                        |                                                                        | conda install --file requirements.txt                  |
-+------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
-| 5. Install package     | pip install -e .                                                       | pip install -e .                                       |
-+------------------------+------------------------------------------------------------------------+--------------------------------------------------------+
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+|                        |                                      EDM                               |                   Miniconda                                        |
++========================+========================================================================+====================================================================+
+| 1. Download            | `enthought.com/products/edm <http://www.enthought.com/products/edm/>`_ | `docs.conda.io <https://docs.conda.io/en/latest/miniconda.html>`_  |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+| 2. Create a new env    | edm environments create --version 3.6 devenv                           | conda create -n devenv python=3.6                                  |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+|                        | edm env import NEW_ENV -f bundled_env.json (1)                         |                                                                    |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+| 3. Activate new envir. | edm shell -e devenv                                                    | source activate devenv                                             |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+| 4. Add dependencies    | edm install "numpy==1.11.3-2" scipy                                    | conda install numpy=1.11 scipy                                     |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+|                        |                                                                        | conda install --file requirements.txt                              |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+| 5. Install package     | pip install -e .                                                       | pip install -e .                                                   |
++------------------------+------------------------------------------------------------------------+--------------------------------------------------------------------+
+
+(1) This command creates a new environment ``NEW_ENV`` from a full environment
+description contained in the json file (bundle). The json file can be created
+from an existing environment replacing ``import`` by ``export``.
 
 More help? ``edm -h`` or ``conda -h`` commands.
 
@@ -113,8 +119,8 @@ code which needs to get compiled to be tested/distributed.
 How to contribute code?
 =======================
 
-The typical workflow
---------------------
+The typical workflows
+---------------------
 
   #. Identify a work item you want to contribute. **Think small**.
 
@@ -150,8 +156,8 @@ The typical workflow
      Otherwise review will be hard(er), therefore delayed, and your PR is
      likely to be rejected.
 
-  # Remember, your most important contribution is tests! If some code isn't 
-    unit-tested, it is either broken, and it will be!
+    Note: Remember, your most important contribution is tests! If some code isn't
+    unit-tested, it is either already broken, and it will be (and no one will know)!
 
   #. Review what has been done with::
 
