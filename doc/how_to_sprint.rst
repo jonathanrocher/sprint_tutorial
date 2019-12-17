@@ -192,7 +192,8 @@ The typical workflow
 
         git remote add upstream git@github.com:jonathanrocher/sprint_tutorial
 
-     if your project is ok with merge, it is easier::
+     If the project you are contributing to is ok with merges of master, it is
+     easier to do the following::
 
         git checkout master
         git pull upstream master
@@ -200,7 +201,7 @@ The typical workflow
         git merge master
         git push
 
-     If you project requires to rebase::
+     If your project requires to rebase::
 
         git fetch upstream
         git rebase upstream/master
@@ -214,10 +215,12 @@ The typical workflow
      by someone who has push rights.
 
   #. After merge, there are 3 typical cleaning steps: delete the branch on the
-     remote repositories (in github), update master locally, delete the branch
-     locally::
+     remote repositories (in github), update master locally from upstream,
+     update master in your own fork and delete the work branch locally.::
 
         git checkout master
+        git pull upstream master
+        git push origin master
         git branch -d fix/bug_name
 
   #. GOTO 1.
