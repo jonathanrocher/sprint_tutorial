@@ -120,7 +120,7 @@ How to contribute code?
 =======================
 
 The typical workflows
---------------------
+---------------------
 
   #. Identify a work item you want to contribute. **Think small**.
 
@@ -156,7 +156,7 @@ The typical workflows
      Otherwise review will be hard(er), therefore delayed, and your PR is
      likely to be rejected.
 
-  # Remember, your most important contribution is tests! If some code isn't 
+    Note: Remember, your most important contribution is tests! If some code isn't
     unit-tested, it is either broken, and it will be!
 
   #. Review what has been done with::
