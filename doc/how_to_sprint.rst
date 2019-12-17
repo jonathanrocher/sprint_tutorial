@@ -157,7 +157,7 @@ The typical workflows
      likely to be rejected.
 
     Note: Remember, your most important contribution is tests! If some code isn't
-    unit-tested, it is either broken, and it will be!
+    unit-tested, it is either already broken, and it will be (and no one will know)!
 
   #. Review what has been done with::
 
