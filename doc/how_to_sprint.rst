@@ -143,9 +143,9 @@ The typical workflows
         git clone https://github.com/<USER NAME>/sprint_tutorial
 
      (Whichever repository you clone will represent a "remote" and be called
-     "origin". A remote is a repository you can pull from. Git allows multiple
-     remotes to be defined on your local checked out code, in case you want to
-     pull and push to/from different locations.)
+     "origin". A remote is a repository you can pull from. ``git`` allows
+     multiple remotes to be defined on your local checked out code, in case you
+     want to pull and push to/from different locations.)
 
   #. Create a new development environment (if not already done). Build the
      project into your dev environment. Run the test suite.
@@ -161,7 +161,7 @@ The typical workflows
 
      (If a "commit" can be defined as a specific state of the source code you
      are working with, a branch can be defined as a series of commit about your
-     targeted work. On your machine, git can track any number of branches,
+     targeted work. On your machine, ``git`` can track any number of branches,
      allowing you to work, in parallel, on any number of distinct tasks.)
 
   #. Make sure you are in the expected branch::
